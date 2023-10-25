@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first interactive Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #content {
+            padding: 5px;
+            background-color: #9a78;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 30px;
+
+        }
+
+        .newcontent {
+            padding: 5px;
+            background-color: #ab89cc;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 10px;
+        }
+
+        #changeColorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h2>Welcome to My Simple Website</h2>
+    </div>
+    <br>
+    <div class="newcontent">
+        <p>This is a basic example of a website using HTML, CSS, and JavaScript.</p>
+        <p>I have used a very simple website to show you all. This Web Development Course will teach you many new things hopefully. After completing this course you all will be able to create your own websites and host them.  </p>
+    </div>
+    <br>
+    <div>
+        <button id="changeColorButton">Change Background Color</button>
+    </div>
+
+    <script>
+        // JavaScript to change the background color
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+            // Generate a random color
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            // Set the background color
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
